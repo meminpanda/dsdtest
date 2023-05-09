@@ -1,0 +1,102 @@
+
+$main-color: #5687e0;
+.main{
+    font-family: sans-serif;
+    padding: 0px 10px;
+    max-width: 1800px;
+    margin: auto;
+    .menu{
+        width: 100%;
+        display: flex;
+        box-sizing: border-box;
+        gap: 30px;
+        flex-direction: row;
+        &::-webkit-scrollbar { 
+            display: none;  /* Safari and Chrome */
+        }
+        @media only screen and (max-width: 750px) {
+            flex-direction: column;
+            gap: 15px;
+            border-left: 2px solid lightgray;
+        }
+        @media only screen and (min-width: 751px) {
+            border-bottom: 2px solid lightgray;
+
+        }
+        &__tab{
+            width: fit-content;
+            color: $main-color;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 2px 5px;
+            @media only screen and (max-width: 750px) {
+                margin-left: -2px;
+            }
+            @media only screen and (min-width: 751px) {
+                margin-bottom: -2px;
+            }
+            &[aria-selected="true"]{
+                color: black;
+                @media only screen and (max-width: 750px) {
+                    border-left: 2px solid black;
+                }
+                @media only screen and (min-width: 751px) {
+                    border-bottom: 2px solid black;
+                }
+            }
+        }
+    }
+    .content{
+        width: 100%;
+        margin-top: 15px;
+        &__title{
+            font-size: 35px;
+            font-weight: 700;
+            color: $main-color;
+            margin-bottom: 20px;
+        }
+        &__main{
+            width: 100%;
+            display: flex;
+            box-sizing: border-box;
+            gap: 15px;
+            @media only screen and (max-width: 750px) {
+                flex-direction: column-reverse;
+            }
+            &__text{
+                @media only screen and (max-width: 750px) {
+                    width: 100%;
+                }
+                @media only screen and (min-width: 751px) {
+                    width: 50%;
+                }
+                @media only screen and (min-width: 1200px) {
+                    width: 70%;
+                }
+            }
+            &__container{
+                @media only screen and (max-width: 750px) {
+                    width: 100%;
+                }
+                @media only screen and (min-width: 751px) {
+                    width: 50%;
+                }
+                @media only screen and (min-width: 1200px) {
+                    width: 30%;
+                }
+                &__image{
+                    max-width:100%;
+                    max-height:100%;
+                }
+                &__description{
+                    text-align: center;
+                    width: 100%;
+                    display: block;
+                    font-size: 18px;
+                }
+            }
+        }
+        
+    }
+}

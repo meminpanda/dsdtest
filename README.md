@@ -1,0 +1,3 @@
+-npm install
+-"npx webpack serve" to run on localhos:9000
+-"npm run build" to build app on dist folder
